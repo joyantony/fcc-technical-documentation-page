@@ -45,6 +45,8 @@ The above descriptions may or may not have made sense, so let's make sure things
 </html>
 --code--
 
+Now let's look at a very simple CSS example containing two rules:
+
 --code--
 h1 {
   color: blue;
@@ -117,6 +119,8 @@ div p, #id:first-line{
   background:red;
   background-style: none;
 }
+
+--image--
 
 #8White space
 
