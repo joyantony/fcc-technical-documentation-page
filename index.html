@@ -5,369 +5,373 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>freecodecamp - Technical Documentation Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
 
-  <nav id="navbar">
-    <header>
-      <h1>CSS Documentation</h1>
-    </header>
-    <ul>
-      <li><a class="nav-link" href="#What_is_CSS">What is CSS</a></li>
-      <li><a class="nav-link" href="#Prerequisites">Prerequisites</a></li>
-      <li><a class="nav-link" href="#How_does_CSS_affect_HTML">How does CSS affect HTML?</a></li>
-      <li><a class="nav-link" href="#A_quick_CSS_example">A quick CSS example</a></li>
-      <li><a class="nav-link" href="#How_does_CSS_actually_work">How does CSS actually work?</a></li>
-      <li><a class="nav-link" href="#CSS_declarations">CSS declarations</a></li>
-      <li><a class="nav-link" href="#CSS_declaration_blocks">CSS declaration blocks</a></li>
-      <li><a class="nav-link" href="#CSS_selectors_and_rules">CSS selectors and rules</a></li>
-      <li><a class="nav-link" href="#White_space">White space</a></li>
-      <li><a class="nav-link" href="#Comments">Comments</a></li>
-      <li><a class="nav-link" href="#Shorthand">Shorthand</a></li>
-      <li><a class="nav-link" href="#Reference">Reference</a></li>
-    </ul>
-  </nav>
-
-  <main id="main-doc">
-    <section class="main-section" id="What_is_CSS">
+    <nav id="navbar">
       <header>
-         <h2>What is CSS</h2>
+        <h1>CSS Documentation</h1>
       </header>
-      <p class="main-section-p">
-          CSS is a language for specifying how documents are presented to users — how they are styled, laid out, etc.
-      </p>
-      <p class="main-section-p">
-          A document is usually a text file structured using a markup language — HTML is the most common markup language, but you will also come across other markup languages such as SVG or XML.
-      </p>
-      <p class="main-section-p">
-          Presenting a document to a user means converting it into a usable form for your audience. Browsers, like Firefox, Chrome or Internet Explorer, are designed to present documents visually, for example, on a computer screen, projector or printer.
-      </p>
-    </section>
-
-    <section class="main-section" id="Prerequisites">
-      <header>
-         <h2>Prerequisites</h2>
-      </header>
-      <p class="main-section-p">
-          This guide assumes you have the following basic background:
-      </p>
       <ul>
-        <li class="main-section-list">
-            A general understanding of the Internet and the World Wide Web (WWW).
-        </li>
-        <li class="main-section-list">
-            Good working knowledge of HyperText Markup Language (HTML).
-        </li>
+        <li><a class="nav-link" href="#What_is_CSS">What is CSS</a></li>
+        <li><a class="nav-link" href="#Prerequisites">Prerequisites</a></li>
+        <li><a class="nav-link" href="#How_does_CSS_affect_HTML">How does CSS affect HTML?</a></li>
+        <li><a class="nav-link" href="#A_quick_CSS_example">A quick CSS example</a></li>
+        <li><a class="nav-link" href="#How_does_CSS_actually_work">How does CSS actually work?</a></li>
+        <li><a class="nav-link" href="#CSS_declarations">CSS declarations</a></li>
+        <li><a class="nav-link" href="#CSS_declaration_blocks">CSS declaration blocks</a></li>
+        <li><a class="nav-link" href="#CSS_selectors_and_rules">CSS selectors and rules</a></li>
+        <li><a class="nav-link" href="#White_space">White space</a></li>
+        <li><a class="nav-link" href="#Comments">Comments</a></li>
+        <li><a class="nav-link" href="#Shorthand">Shorthand</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
       </ul>
-    </section>
+    </nav>
 
-    <section class="main-section" id="How_does_CSS_affect_HTML">
-      <header>
-          <h2>How does CSS affect HTML?</h2>
-      </header>
-      <p class="main-section-p">
-          Web browsers apply CSS rules to a document to affect how they are displayed. A CSS rule is formed from:
-      </p>
-      <ul>
-        <li class="main-section-list">
-            A set of properties, which have values set to update how the HTML content is displayed, for example, I want my element's width to be 50% of its parent element, and its background to be red.
-        </li>
-        <li class="main-section-list">
-            A selector, which selects the element(s) you want to apply the updated property values to. For example, I want to apply my CSS rule to all the paragraphs in my HTML document.
-        </li>
-      </ul>
-      <p class="main-section-p">
-          A set of CSS rules contained within a stylesheet determines how a webpage should look.
-      </p>
-    </section>
-
-    <section class="main-section" id="A_quick_CSS_example">
-      <header>
-          <h2>A quick CSS example</h2>
-      </header>
-      <p class="main-section-p">
-          The above descriptions may or may not have made sense, so let's make sure things are clear by presenting a quick example. First of all, let's take a simple HTML document, containing an <code>&lt;h1&gt;</code> and a <code>&lt;p&gt;</code> (notice that a stylesheet is applied to the HTML using a <code>&lt;link&gt;</code> element):
-      </p>
-      <pre>
-        <code>
-            &lt;!DOCTYPE html&gt; 
-            &lt;html&gt; 
-              &lt;head&gt; 
-                &lt;meta charset=&quot;utf-8&quot;&gt;
-                &lt;title&gt;My CSS experiment&lt;/title&gt; 
-                &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt; 
-              &lt;/head&gt; 
-              &lt;body&gt; 
-                &lt;h1&gt;Hello World!&lt;/h1&gt; 
-                &lt;p&gt;This is my first CSS example&lt;/p&gt; 
-              &lt;/body&gt; 
-            &lt;/html&gt;
-        </code>
-      </pre>
-      <p class="main-section-p">
-          Now let's look at a very simple CSS example containing two rules:
-      </p>
-      <pre>
-        <code>
-            h1 {
-              color: blue;
-              background-color: yellow;
-              border: 1px solid black;
+    <main id="main-doc">
+      <section class="main-section" id="What_is_CSS">
+        <header>
+           <h2>What is CSS</h2>
+        </header>
+        <p class="main-section-p">
+            CSS is a language for specifying how documents are presented to users — how they are styled, laid out, etc.
+        </p>
+        <p class="main-section-p">
+            A document is usually a text file structured using a markup language — HTML is the most common markup language, but you will also come across other markup languages such as SVG or XML.
+        </p>
+        <p class="main-section-p">
+            Presenting a document to a user means converting it into a usable form for your audience. Browsers, like Firefox, Chrome or Internet Explorer, are designed to present documents visually, for example, on a computer screen, projector or printer.
+        </p>
+      </section>
+  
+      <section class="main-section" id="Prerequisites">
+        <header>
+           <h2>Prerequisites</h2>
+        </header>
+        <p class="main-section-p">
+            This guide assumes you have the following basic background:
+        </p>
+        <ul>
+          <li class="main-section-list">
+              A general understanding of the Internet and the World Wide Web (WWW).
+          </li>
+          <li class="main-section-list">
+              Good working knowledge of HyperText Markup Language (HTML).
+          </li>
+        </ul>
+      </section>
+  
+      <section class="main-section" id="How_does_CSS_affect_HTML">
+        <header>
+            <h2>How does CSS affect HTML?</h2>
+        </header>
+        <p class="main-section-p">
+            Web browsers apply CSS rules to a document to affect how they are displayed. A CSS rule is formed from:
+        </p>
+        <ul>
+          <li class="main-section-list">
+              A set of properties, which have values set to update how the HTML content is displayed, for example, I want my element's width to be 50% of its parent element, and its background to be red.
+          </li>
+          <li class="main-section-list">
+              A selector, which selects the element(s) you want to apply the updated property values to. For example, I want to apply my CSS rule to all the paragraphs in my HTML document.
+          </li>
+        </ul>
+        <p class="main-section-p">
+            A set of CSS rules contained within a stylesheet determines how a webpage should look.
+        </p>
+      </section>
+  
+      <section class="main-section" id="A_quick_CSS_example">
+        <header>
+            <h2>A quick CSS example</h2>
+        </header>
+        <p class="main-section-p">
+            The above descriptions may or may not have made sense, so let's make sure things are clear by presenting a quick example. First of all, let's take a simple HTML document, containing an <code>&lt;h1&gt;</code> and a <code>&lt;p&gt;</code> (notice that a stylesheet is applied to the HTML using a <code>&lt;link&gt;</code> element):
+        </p>
+        <pre>
+          <code>
+              &lt;!DOCTYPE html&gt; 
+              &lt;html&gt; 
+                &lt;head&gt; 
+                  &lt;meta charset=&quot;utf-8&quot;&gt;
+                  &lt;title&gt;My CSS experiment&lt;/title&gt; 
+                  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt; 
+                &lt;/head&gt; 
+                &lt;body&gt; 
+                  &lt;h1&gt;Hello World!&lt;/h1&gt; 
+                  &lt;p&gt;This is my first CSS example&lt;/p&gt; 
+                &lt;/body&gt; 
+              &lt;/html&gt;
+          </code>
+        </pre>
+        <p class="main-section-p">
+            Now let's look at a very simple CSS example containing two rules:
+        </p>
+        <pre>
+          <code>
+              h1 {
+                color: blue;
+                background-color: yellow;
+                border: 1px solid black;
+              }
+              
+              p {
+                color: red;
+              }
+          </code>
+        </pre>
+        <p class="main-section-p">
+            The first rule starts with an <code>h1</code> selector, which means that it will apply its property values to the <code>&lt;h1&gt;</code> element. It contains three properties and their values (each property/value pair is called a <strong>declaration</strong>):
+        </p>
+        <ul>
+          <li class="main-section-list">
+              The first one sets the text color to blue.
+          </li>
+          <li class="main-section-list">
+              The second sets the background color to yellow.
+          </li>
+          <li class="main-section-list">
+              The third one puts a border around the header that is 1 pixel wide, solid (not dotted, or dashed, etc.), and colored black.
+          </li>
+        </ul>
+        <p class="main-section-p">
+            The second rule starts with a <code>p</code> selector, which means that it will apply its property values to the <code>&lt;p&gt;</code> element. It contains one declaration, which sets the text color to red.
+        </p>
+        <p class="main-section-p">
+            In a web browser, the code above would produce the following output:
+        </p>
+        <img src="img/first-example.png" alt="Example web page">
+        <p class="main-section-p">
+            This isn't too pretty, but at least it starts to give you an idea of how CSS works.
+        </p>
+      </section>
+  
+      <section class="main-section" id="How_does_CSS_actually_work">
+        <header>
+            <h2>How does CSS actually work?</h2>
+        </header>
+        <p class="main-section-p">
+            When a browser displays a document, it must combine the document's content with its style information. It processes the document in two stages:
+        </p>
+        <ul>
+          <li class="main-section-list">
+              The browser converts HTML and CSS into the DOM (Document Object Model). The DOM represents the document in the computer's memory. It combines the document's content with its style.
+          </li>
+          <li class="main-section-list">
+              The browser displays the contents of the DOM.
+          </li>
+        </ul>
+        <img class="svg-img" src="img/rendering.svg" alt="flow Chart" style="height: auto; max-width: 635px; width: 100%;">
+      </section>
+  
+      <section class="main-section" id="CSS_declarations">
+        <header>
+            <h2>CSS declarations</h2>
+        </header>
+        <p class="main-section-p">
+            Setting CSS properties to specific values is the core function of the CSS language. The CSS engine calculates which declarations apply to every single element of a page in order to appropriately lay it out and style it. What is important to remember is that both properties and values are case-sensitive in CSS. The property and value in each pair is separated by a colon (<code>:</code>)
+        </p>
+        <img src="img/css syntax - declaration.png" alt="css syntax">
+      </section>
+  
+      <section class="main-section" id="CSS_declaration_blocks">
+        <header>
+            <h2>CSS declaration blocks</h2>
+        </header>
+        <p class="main-section-p">
+            Declarations are grouped in blocks, with each set of declarations being wrapped by an opening curly brace, (<code>{</code>) and a closing one (<code>}</code>).
+        </p>
+        <p class="main-section-p">
+            Each declaration contained inside a declaration block has to be separated by a semi-colon (<code>;</code>), otherwise the code won't work (or will at least give unexpected results.) The last declaration of a block doesn't need to be terminated by a semi-colon, though it is often considered good style to do so as it prevents forgetting to add it when extending the block with another declaration.
+        </p>
+        <img src="img/css syntax - declarations block.png" alt="css syntax">
+      </section>
+  
+      <section class="main-section" id="CSS_selectors_and_rules">
+        <header>
+            <h2>CSS selectors and rules</h2>
+        </header>
+        <p class="main-section-p">
+            We are missing one part of the puzzle — we need to discuss how to tell our declaration blocks which elements they should be applied to. This is done by prefixing each declaration block with a selector — a pattern that matches some elements on the page. The associated declarations will be applied to those elements only. The selector plus the declaration block is called a ruleset, or often simply just a rule.
+        </p>
+        <img src="img/css syntax - ruleset.png" alt="css syntax">
+      </section>
+  
+      <section class="main-section" id="White_space">
+        <header>
+          <h2>White space</h2>
+        </header>
+        <p class="main-section-p">
+          White space means actual spaces, tabs and new lines. You can add white space to make your stylesheets more readable.
+        </p>
+        <p class="main-section-p">
+          In the same manner as HTML, the browser tends to ignore much of the whitespace inside your CSS; a lot of the whitespace is just there to aid readability. In our first example below we have each declaration (and rule start/end) on its own line — this is arguably a good way to write CSS, as it makes it easy to maintain and understand:
+        </p>
+        <pre>
+          <code>
+            body {
+              font: 1em/150% Helvetica, Arial, sans-serif;
+              padding: 1em;
+              margin: 0 auto;
+              max-width: 33em;
             }
             
-            p {
-              color: red;
+            @media (min-width: 70em) {
+              body {
+                font-size: 130%;
+              }
             }
-        </code>
-      </pre>
-      <p class="main-section-p">
-          The first rule starts with an <code>h1</code> selector, which means that it will apply its property values to the <code>&lt;h1&gt;</code> element. It contains three properties and their values (each property/value pair is called a <strong>declaration</strong>):
-      </p>
-      <ul>
-        <li class="main-section-list">
-            The first one sets the text color to blue.
-        </li>
-        <li class="main-section-list">
-            The second sets the background color to yellow.
-        </li>
-        <li class="main-section-list">
-            The third one puts a border around the header that is 1 pixel wide, solid (not dotted, or dashed, etc.), and colored black.
-        </li>
-      </ul>
-      <p class="main-section-p">
-          The second rule starts with a <code>p</code> selector, which means that it will apply its property values to the <code>&lt;p&gt;</code> element. It contains one declaration, which sets the text color to red.
-      </p>
-      <p class="main-section-p">
-          In a web browser, the code above would produce the following output:
-      </p>
-      <img src="img/first-example.png" alt="Example web page">
-      <p class="main-section-p">
-          This isn't too pretty, but at least it starts to give you an idea of how CSS works.
-      </p>
-    </section>
-
-    <section class="main-section" id="How_does_CSS_actually_work">
-      <header>
-          <h2>How does CSS actually work?</h2>
-      </header>
-      <p class="main-section-p">
-          When a browser displays a document, it must combine the document's content with its style information. It processes the document in two stages:
-      </p>
-      <ul>
-        <li class="main-section-list">
-            The browser converts HTML and CSS into the DOM (Document Object Model). The DOM represents the document in the computer's memory. It combines the document's content with its style.
-        </li>
-        <li class="main-section-list">
-            The browser displays the contents of the DOM.
-        </li>
-      </ul>
-      <img class="svg-img" src="img/rendering.svg" alt="flow Chart" style="height: auto; max-width: 635px; width: 100%;">
-    </section>
-
-    <section class="main-section" id="CSS_declarations">
-      <header>
-          <h2>CSS declarations</h2>
-      </header>
-      <p class="main-section-p">
-          Setting CSS properties to specific values is the core function of the CSS language. The CSS engine calculates which declarations apply to every single element of a page in order to appropriately lay it out and style it. What is important to remember is that both properties and values are case-sensitive in CSS. The property and value in each pair is separated by a colon (<code>:</code>)
-      </p>
-      <img src="img/css syntax - declaration.png" alt="css syntax">
-    </section>
-
-    <section class="main-section" id="CSS_declaration_blocks">
-      <header>
-          <h2>CSS declaration blocks</h2>
-      </header>
-      <p class="main-section-p">
-          Declarations are grouped in blocks, with each set of declarations being wrapped by an opening curly brace, (<code>{</code>) and a closing one (<code>}</code>).
-      </p>
-      <p class="main-section-p">
-          Each declaration contained inside a declaration block has to be separated by a semi-colon (<code>;</code>), otherwise the code won't work (or will at least give unexpected results.) The last declaration of a block doesn't need to be terminated by a semi-colon, though it is often considered good style to do so as it prevents forgetting to add it when extending the block with another declaration.
-      </p>
-      <img src="img/css syntax - declarations block.png" alt="css syntax">
-    </section>
-
-    <section class="main-section" id="CSS_selectors_and_rules">
-      <header>
-          <h2>CSS selectors and rules</h2>
-      </header>
-      <p class="main-section-p">
-          We are missing one part of the puzzle — we need to discuss how to tell our declaration blocks which elements they should be applied to. This is done by prefixing each declaration block with a selector — a pattern that matches some elements on the page. The associated declarations will be applied to those elements only. The selector plus the declaration block is called a ruleset, or often simply just a rule.
-      </p>
-      <img src="img/css syntax - ruleset.png" alt="css syntax">
-    </section>
-
-    <section class="main-section" id="White_space">
-      <header>
-        <h2>White space</h2>
-      </header>
-      <p class="main-section-p">
-        White space means actual spaces, tabs and new lines. You can add white space to make your stylesheets more readable.
-      </p>
-      <p class="main-section-p">
-        In the same manner as HTML, the browser tends to ignore much of the whitespace inside your CSS; a lot of the whitespace is just there to aid readability. In our first example below we have each declaration (and rule start/end) on its own line — this is arguably a good way to write CSS, as it makes it easy to maintain and understand:
-      </p>
-      <pre>
-        <code>
-          body {
-            font: 1em/150% Helvetica, Arial, sans-serif;
-            padding: 1em;
+            
+            h1 {
+              font-size: 1.5em;
+            }
+            
+            div p, #id:first-line {
+              background-color: red;
+              background-style: none
+            }
+            
+            div p {
+              margin: 0;
+              padding: 1em;
+            }
+            
+            div p + p {
+              padding-top: 0;
+            }
+          </code>
+        </pre>
+        <p class="main-section-p">
+          You could write exactly the same CSS like so, with most of the whitespace removed — this is functionally identical to the first example, but I'm sure you'll agree that it is somewhat harder to read:
+        </p>
+        <pre>
+          <code>
+            body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
+            @media (min-width: 70em) { body {font-size: 130%;} }
+            
+            h1 {font-size: 1.5em;}
+            
+            div p, #id:first-line {background-color: red; background-style: none}
+            div p {margin: 0; padding: 1em;}
+            div p + p {padding-top: 0;}
+          </code>
+        </pre>
+        <p class="main-section-p">
+          The whitespace you do need to be careful of in CSS is the whitespace around the properties and their values. For example, the following is valid CSS:
+        </p>
+        <pre>
+          <code>
             margin: 0 auto;
-            max-width: 33em;
-          }
-          
-          @media (min-width: 70em) {
-            body {
-              font-size: 130%;
+            padding-left: 10px;
+          </code>
+        </pre>
+        <p class="main-section-p">
+          But the following is invalid:
+        </p>
+        <pre>
+          <code>
+            margin: 0auto;
+            padding- left: 10px;
+          </code>
+        </pre>
+      </section>
+  
+      <section class="main-section" id="Comments">
+        <header>
+          <h2>Comments</h2>
+        </header>
+        <p class="main-section-p">
+          As with HTML, you are encouraged to make comments in your CSS, to help you understand how your code works when coming back to it after several months, and to help others understand it. Comments are also useful for temporarily commenting out certain parts of the code for testing purposes, for example if you are trying to find which part of your code is causing an error.
+        </p>
+        <p class="main-section-p">
+          Comments in CSS begin with <code>/*</code> and end with <code>*/</code> 
+        </p>
+        <pre>
+          <code>
+            /* Handle basic element styling */
+            /* -------------------------------------------------------------------------------------------- */
+            body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
+            @media (min-width: 70em) {
+              /* Let's special case the global font size. On large screen or window,
+                  we increase the font size for better readability */
+              body {font-size: 130%;}
             }
-          }
-          
-          h1 {
-            font-size: 1.5em;
-          }
-          
-          div p, #id:first-line {
+            
+            h1 {font-size: 1.5em;}
+            
+            /* Handle specific elements nested in the DOM  */
+            /* -------------------------------------------------------------------------------------------- */
+            div p, #id:first-line {background-color: red; background-style: none}
+            div p                 {margin          :   0; padding         : 1em;}
+            div p + p             {padding-top     :   0;                       }
+          </code>
+        </pre>
+      </section>
+  
+      <section class="main-section" id="Shorthand">
+        <header>
+          <h2>Shorthand</h2>
+        </header>
+        <p class="main-section-p">
+          Some properties like font, background, padding, border, and margin are called shorthand properties — this is because they allow you to set several property values in a single line, saving time and making your code neater in the process.
+        </p>
+        <p class="main-section-p">
+          For example, this line:
+        </p>
+        <pre>
+          <code>
+            /* in shorthand like padding and margin, the values are applied
+            in the order top, right, bottom, left (the same order as an analog clock). There are also other 
+            shorthand types, for example two values, which set for example
+            the padding for top/bottom, then left/right */
+            padding: 10px 15px 15px 5px;
+          </code>
+        </pre>
+        <p class="main-section-p">
+          Does the same thing as all these:
+        </p>
+        <pre>
+          <code>
+            padding-top: 10px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            padding-left: 5px;
+          </code>
+        </pre>
+        <p class="main-section-p">
+          Whereas this line:
+        </p>
+        <pre>
+          <code>
+            background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+          </code>
+        </pre>
+        <p class="main-section-p">
+          Does the same thing as all these:
+        </p>
+        <pre>
+          <code>
             background-color: red;
-            background-style: none
-          }
-          
-          div p {
-            margin: 0;
-            padding: 1em;
-          }
-          
-          div p + p {
-            padding-top: 0;
-          }
-        </code>
-      </pre>
-      <p class="main-section-p">
-        You could write exactly the same CSS like so, with most of the whitespace removed — this is functionally identical to the first example, but I'm sure you'll agree that it is somewhat harder to read:
-      </p>
-      <pre>
-        <code>
-          body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
-          @media (min-width: 70em) { body {font-size: 130%;} }
-          
-          h1 {font-size: 1.5em;}
-          
-          div p, #id:first-line {background-color: red; background-style: none}
-          div p {margin: 0; padding: 1em;}
-          div p + p {padding-top: 0;}
-        </code>
-      </pre>
-      <p class="main-section-p">
-        The whitespace you do need to be careful of in CSS is the whitespace around the properties and their values. For example, the following is valid CSS:
-      </p>
-      <pre>
-        <code>
-          margin: 0 auto;
-          padding-left: 10px;
-        </code>
-      </pre>
-      <p class="main-section-p">
-        But the following is invalid:
-      </p>
-      <pre>
-        <code>
-          margin: 0auto;
-          padding- left: 10px;
-        </code>
-      </pre>
-    </section>
-
-    <section class="main-section" id="Comments">
-      <header>
-        <h2>Comments</h2>
-      </header>
-      <p class="main-section-p">
-        As with HTML, you are encouraged to make comments in your CSS, to help you understand how your code works when coming back to it after several months, and to help others understand it. Comments are also useful for temporarily commenting out certain parts of the code for testing purposes, for example if you are trying to find which part of your code is causing an error.
-      </p>
-      <p class="main-section-p">
-        Comments in CSS begin with <code>/*</code> and end with <code>*/</code> 
-      </p>
-      <pre>
-        <code>
-          /* Handle basic element styling */
-          /* -------------------------------------------------------------------------------------------- */
-          body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
-          @media (min-width: 70em) {
-            /* Let's special case the global font size. On large screen or window,
-                we increase the font size for better readability */
-            body {font-size: 130%;}
-          }
-          
-          h1 {font-size: 1.5em;}
-          
-          /* Handle specific elements nested in the DOM  */
-          /* -------------------------------------------------------------------------------------------- */
-          div p, #id:first-line {background-color: red; background-style: none}
-          div p                 {margin          :   0; padding         : 1em;}
-          div p + p             {padding-top     :   0;                       }
-        </code>
-      </pre>
-    </section>
-
-    <section class="main-section" id="Shorthand">
-      <header>
-        <h2>Shorthand</h2>
-      </header>
-      <p class="main-section-p">
-        Some properties like font, background, padding, border, and margin are called shorthand properties — this is because they allow you to set several property values in a single line, saving time and making your code neater in the process.
-      </p>
-      <p class="main-section-p">
-        For example, this line:
-      </p>
-      <pre>
-        <code>
-          /* in shorthand like padding and margin, the values are applied
-          in the order top, right, bottom, left (the same order as an analog clock). There are also other 
-          shorthand types, for example two values, which set for example
-          the padding for top/bottom, then left/right */
-          padding: 10px 15px 15px 5px;
-        </code>
-      </pre>
-      <p class="main-section-p">
-        Does the same thing as all these:
-      </p>
-      <pre>
-        <code>
-          padding-top: 10px;
-          padding-right: 15px;
-          padding-bottom: 15px;
-          padding-left: 5px;
-        </code>
-      </pre>
-      <p class="main-section-p">
-        Whereas this line:
-      </p>
-      <pre>
-        <code>
-          background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
-        </code>
-      </pre>
-      <p class="main-section-p">
-        Does the same thing as all these:
-      </p>
-      <pre>
-        <code>
-          background-color: red;
-          background-image: url(bg-graphic.png);
-          background-position: 10px 10px;
-          background-repeat: repeat-x;
-          background-scroll: fixed;
-        </code>
-      </pre>
-    </section>
-
-    <section class="main-section" id="Reference">
-      <header>
-        <h2>Reference</h2>
-      </header>
-      <p class="main-section-p">
-        All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">MDN</a>
-      </p>
-    </section>
-  </main>
+            background-image: url(bg-graphic.png);
+            background-position: 10px 10px;
+            background-repeat: repeat-x;
+            background-scroll: fixed;
+          </code>
+        </pre>
+      </section>
+  
+      <section class="main-section" id="Reference">
+        <header>
+          <h2>Reference</h2>
+        </header>
+        <p class="main-section-p">
+          All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">MDN</a>
+        </p>
+      </section>
+    </main>
+    
+  </div>
 </body>
 </html>

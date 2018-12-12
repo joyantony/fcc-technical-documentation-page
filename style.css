@@ -1,0 +1,22 @@
+html,
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* #navbar{
+  flex-basis: 40%;
+}
+
+#main-doc{
+  flex-basis: 60%;
+} */
