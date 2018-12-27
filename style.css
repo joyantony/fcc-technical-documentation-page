@@ -13,10 +13,16 @@ img{
   max-width: 100%;
 }
 
-/* #navbar{
-  flex-basis: 40%;
-}
 
-#main-doc{
-  flex-basis: 60%;
-} */
+
+@media (min-width: 800px){
+  .container{
+    flex-direction: row;
+  }
+
+  #navbar{
+    flex-basis: 40%;
+  }
+
+  
+}
