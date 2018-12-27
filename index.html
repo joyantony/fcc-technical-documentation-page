@@ -90,38 +90,38 @@
         <p class="main-section-p">
             The above descriptions may or may not have made sense, so let's make sure things are clear by presenting a quick example. First of all, let's take a simple HTML document, containing an <code>&lt;h1&gt;</code> and a <code>&lt;p&gt;</code> (notice that a stylesheet is applied to the HTML using a <code>&lt;link&gt;</code> element):
         </p>
-        <pre>
-          <code>
-              &lt;!DOCTYPE html&gt; 
-              &lt;html&gt; 
-                &lt;head&gt; 
-                  &lt;meta charset=&quot;utf-8&quot;&gt;
-                  &lt;title&gt;My CSS experiment&lt;/title&gt; 
-                  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt; 
-                &lt;/head&gt; 
-                &lt;body&gt; 
-                  &lt;h1&gt;Hello World!&lt;/h1&gt; 
-                  &lt;p&gt;This is my first CSS example&lt;/p&gt; 
-                &lt;/body&gt; 
-              &lt;/html&gt;
-          </code>
-        </pre>
+<pre>
+  <code>
+    &lt;!DOCTYPE html&gt; 
+    &lt;html&gt; 
+      &lt;head&gt; 
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;My CSS experiment&lt;/title&gt; 
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt; 
+      &lt;/head&gt; 
+      &lt;body&gt; 
+        &lt;h1&gt;Hello World!&lt;/h1&gt; 
+        &lt;p&gt;This is my first CSS example&lt;/p&gt; 
+      &lt;/body&gt; 
+    &lt;/html&gt;
+  </code>
+</pre>
         <p class="main-section-p">
             Now let's look at a very simple CSS example containing two rules:
         </p>
-        <pre>
-          <code>
-              h1 {
-                color: blue;
-                background-color: yellow;
-                border: 1px solid black;
-              }
-              
-              p {
-                color: red;
-              }
-          </code>
-        </pre>
+<pre>
+  <code>
+    h1 {
+      color: blue;
+      background-color: yellow;
+      border: 1px solid black;
+    }
+    
+    p {
+      color: red;
+    }
+  </code>
+</pre>
         <p class="main-section-p">
             The first rule starts with an <code>h1</code> selector, which means that it will apply its property values to the <code>&lt;h1&gt;</code> element. It contains three properties and their values (each property/value pair is called a <strong>declaration</strong>):
         </p>
@@ -209,73 +209,73 @@
         <p class="main-section-p">
           In the same manner as HTML, the browser tends to ignore much of the whitespace inside your CSS; a lot of the whitespace is just there to aid readability. In our first example below we have each declaration (and rule start/end) on its own line — this is arguably a good way to write CSS, as it makes it easy to maintain and understand:
         </p>
-        <pre>
-          <code>
-            body {
-              font: 1em/150% Helvetica, Arial, sans-serif;
-              padding: 1em;
-              margin: 0 auto;
-              max-width: 33em;
-            }
-            
-            @media (min-width: 70em) {
-              body {
-                font-size: 130%;
-              }
-            }
-            
-            h1 {
-              font-size: 1.5em;
-            }
-            
-            div p, #id:first-line {
-              background-color: red;
-              background-style: none
-            }
-            
-            div p {
-              margin: 0;
-              padding: 1em;
-            }
-            
-            div p + p {
-              padding-top: 0;
-            }
-          </code>
-        </pre>
+<pre>
+  <code>
+    body {
+      font: 1em/150% Helvetica, Arial, sans-serif;
+      padding: 1em;
+      margin: 0 auto;
+      max-width: 33em;
+    }
+    
+    @media (min-width: 70em) {
+      body {
+        font-size: 130%;
+      }
+    }
+    
+    h1 {
+      font-size: 1.5em;
+    }
+    
+    div p, #id:first-line {
+      background-color: red;
+      background-style: none
+    }
+    
+    div p {
+      margin: 0;
+      padding: 1em;
+    }
+    
+    div p + p {
+      padding-top: 0;
+    }
+  </code>
+</pre>
         <p class="main-section-p">
           You could write exactly the same CSS like so, with most of the whitespace removed — this is functionally identical to the first example, but I'm sure you'll agree that it is somewhat harder to read:
         </p>
-        <pre>
-          <code>
-            body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
-            @media (min-width: 70em) { body {font-size: 130%;} }
-            
-            h1 {font-size: 1.5em;}
-            
-            div p, #id:first-line {background-color: red; background-style: none}
-            div p {margin: 0; padding: 1em;}
-            div p + p {padding-top: 0;}
-          </code>
-        </pre>
+<pre>
+  <code>
+    body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
+    @media (min-width: 70em) { body {font-size: 130%;} }
+    
+    h1 {font-size: 1.5em;}
+    
+    div p, #id:first-line {background-color: red; background-style: none}
+    div p {margin: 0; padding: 1em;}
+    div p + p {padding-top: 0;}
+  </code>
+</pre>
         <p class="main-section-p">
           The whitespace you do need to be careful of in CSS is the whitespace around the properties and their values. For example, the following is valid CSS:
         </p>
-        <pre>
-          <code>
-            margin: 0 auto;
-            padding-left: 10px;
-          </code>
-        </pre>
+<pre>
+  <code>
+    margin: 0 auto;
+    padding-left: 10px;
+  </code>
+</pre>
         <p class="main-section-p">
           But the following is invalid:
         </p>
-        <pre>
-          <code>
-            margin: 0auto;
-            padding- left: 10px;
-          </code>
-        </pre>
+<pre>
+  <code>
+    margin: 0auto;
+    padding- left: 10px;
+  </code>
+</pre>
       </section>
   
       <section class="main-section" id="Comments">
@@ -288,26 +288,26 @@
         <p class="main-section-p">
           Comments in CSS begin with <code>/*</code> and end with <code>*/</code> 
         </p>
-        <pre>
-          <code>
-            /* Handle basic element styling */
-            /* -------------------------------------------------------------------------------------------- */
-            body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
-            @media (min-width: 70em) {
-              /* Let's special case the global font size. On large screen or window,
-                  we increase the font size for better readability */
-              body {font-size: 130%;}
-            }
-            
-            h1 {font-size: 1.5em;}
-            
-            /* Handle specific elements nested in the DOM  */
-            /* -------------------------------------------------------------------------------------------- */
-            div p, #id:first-line {background-color: red; background-style: none}
-            div p                 {margin          :   0; padding         : 1em;}
-            div p + p             {padding-top     :   0;                       }
-          </code>
-        </pre>
+<pre>
+  <code>
+    /* Handle basic element styling */
+    /* -------------------------------------------------------------------------------------------- */
+    body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
+    @media (min-width: 70em) {
+      /* Let's special case the global font size. On large screen or window,
+          we increase the font size for better readability */
+      body {font-size: 130%;}
+    }
+    
+    h1 {font-size: 1.5em;}
+    
+    /* Handle specific elements nested in the DOM  */
+    /* -------------------------------------------------------------------------------------------- */
+    div p, #id:first-line {background-color: red; background-style: none}
+    div p                 {margin          :   0; padding         : 1em;}
+    div p + p             {padding-top     :   0;                       }
+  </code>
+</pre>
       </section>
   
       <section class="main-section" id="Shorthand">
@@ -320,46 +320,46 @@
         <p class="main-section-p">
           For example, this line:
         </p>
-        <pre>
-          <code>
-            /* in shorthand like padding and margin, the values are applied
-            in the order top, right, bottom, left (the same order as an analog clock). There are also other 
-            shorthand types, for example two values, which set for example
-            the padding for top/bottom, then left/right */
-            padding: 10px 15px 15px 5px;
-          </code>
-        </pre>
+<pre>
+  <code>
+    /* in shorthand like padding and margin, the values are applied
+    in the order top, right, bottom, left (the same order as an analog clock). There are also other 
+    shorthand types, for example two values, which set for example
+    the padding for top/bottom, then left/right */
+    padding: 10px 15px 15px 5px;
+  </code>
+</pre>
         <p class="main-section-p">
           Does the same thing as all these:
         </p>
-        <pre>
-          <code>
-            padding-top: 10px;
-            padding-right: 15px;
-            padding-bottom: 15px;
-            padding-left: 5px;
-          </code>
-        </pre>
+<pre>
+  <code>
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+  </code>
+</pre>
         <p class="main-section-p">
           Whereas this line:
         </p>
-        <pre>
-          <code>
-            background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
-          </code>
-        </pre>
+<pre>
+  <code>
+    background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+  </code>
+</pre>
         <p class="main-section-p">
           Does the same thing as all these:
         </p>
-        <pre>
-          <code>
-            background-color: red;
-            background-image: url(bg-graphic.png);
-            background-position: 10px 10px;
-            background-repeat: repeat-x;
-            background-scroll: fixed;
-          </code>
-        </pre>
+<pre>
+  <code>
+    background-color: red;
+    background-image: url(bg-graphic.png);
+    background-position: 10px 10px;
+    background-repeat: repeat-x;
+    background-scroll: fixed;
+  </code>
+</pre>
       </section>
   
       <section class="main-section" id="Reference">

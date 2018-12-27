@@ -2,17 +2,51 @@ html,
 body{
   padding: 0;
   margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #333;
 }
 
 .container{
   display: flex;
   flex-direction: column;
+  padding: .2rem 1rem 1rem .2rem;
+}
+
+#navbar{
+  margin: 0;
+  padding: 0;
+}
+
+#navbar header{
+  text-align: center;
+}
+
+#navbar ul{
+  margin: 0;
+  padding-left: 1.25rem;
+  height: 200px;
+  overflow-y: auto;
+}
+
+#navbar li{
+  list-style: none;
+  padding: 1rem 0;
+}
+
+#navbar a{
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
 img{
   max-width: 100%;
 }
 
+pre{
+  background: #f7f7f7;
+  overflow-x: auto;
+}
 
 
 @media (min-width: 800px){
@@ -21,8 +55,20 @@ img{
   }
 
   #navbar{
-    flex-basis: 40%;
+    flex-basis: 50%;
+    width: 250px;
+    border-right: 2px solid #444;
+    position: fixed;
+    overflow-y: scroll;
   }
 
+  #navbar ul{
+    height: auto;
+    
+  }
+
+  #main-doc{
+    margin-left: 17.625rem;
+  }
   
 }
