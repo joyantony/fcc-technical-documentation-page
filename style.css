@@ -9,7 +9,7 @@ body{
 .container{
   display: flex;
   flex-direction: column;
-  padding: .2rem 1rem 1rem 1rem;
+  padding: .2rem 1rem 1rem 0;
 }
 
 #navbar{
@@ -23,20 +23,41 @@ body{
 
 .nav-links{
   margin: 0;
-  padding-left: 1.25rem;
+  padding: 0;
   height: 200px;
   overflow-y: scroll;
+  border-right: 1px solid #444;
+  border-bottom: 1px solid #444;
+  border-left: 1px solid #444;
 }
+
+.nav-link{
+  margin: 0;
+  padding: 0;
+  display: block;
+  border-top: 1px solid #444;
+}
+
+#navbar ul{
+  margin: 0;
+  padding: 0;
+}
+
 
 #navbar li{
   list-style: none;
-  padding: 1rem 0;
+  padding: 0;
 }
 
 #navbar a{
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  padding: 1rem 0 1rem 2rem;
+}
+
+#main-doc{
+  padding-left: 1rem;
 }
 
 img{
@@ -48,10 +69,42 @@ pre{
   overflow-x: auto;
 }
 
+.main-footer{
+  text-align: center;
+  background: #dddddd;
+  padding: 1rem 0;
+}
+
+.main-footer ul{
+  list-style-type: none;
+}
+
+.main-footer ul li a{
+  text-decoration: none;
+  font-size: .9rem;
+  color: #333;
+  padding-right: 1rem;
+}
+
+.main-footer a:hover{
+  color: #000;
+}
+
+.copy{
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+.copy a{
+  text-decoration: none;
+  color: inherit;
+}
+
 
 @media (min-width: 800px){
   .container{
     flex-direction: row;
+    padding: .2rem 1rem 0 0;
   }
 
   #navbar{
@@ -62,17 +115,34 @@ pre{
     
   }
 
+  #navbar ul{
+    margin: 0;
+    padding: 0;
+  }
+
   .nav-links{
     top: 0;
     bottom: 0;
-    height: calc(100vh - 3rem);
+    height: calc(100vh - 4rem);
     overflow-y: auto;
   }
+
+  .nav-link{
+    margin: 0;
+    padding: 0;
+    display: block;
+    border-top: 1px solid #444;
+  }
+  
 
   #main-doc{
     padding-left: 17.625rem;
     display: flex;
     flex-direction: column;
+  }
+
+  .main-footer{
+    margin-left: 15.625rem;
   }
   
 }
